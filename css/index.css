@@ -1,0 +1,11 @@
+/* movies.html */
+.hidden {
+    display: none;
+}
+
+.movies {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
     <title>Movies</title>
 </head>
 <body>
@@ -12,6 +13,60 @@
             <a href="actors.html">Actors</a>
         </nav>
     </header>
-    
+    <button id="add-new-movie-button" onclick="handleAddNewToggle()">Add Movie to Database</button>
+    <div class="display">
+        <form class="hidden add-movie-form">
+            <label for="title">Title</label>
+            <br/>
+            <input
+            type="text"
+            name="title"
+            id="title-input"
+            placeholder="Title"/>
+            <br/>
+
+            <label for="year">Year</label>
+            <br/>
+            <input
+            type="text"
+            name="year"
+            id="year-input"
+            placeholder="Year"/>
+            <br/>
+
+            <label id="rating-label" for="rating">Rating 5/10</label>
+            <br/>
+            <input
+            type="range"
+            onchange="handleRatingChange()"
+            name="rating"
+            id="rating-input"
+            min="0"
+            max="10"
+            step=".5"
+            value="5"/>
+            <br/>
+
+            <label for="summary">Summary</label>
+            <br/>
+            <textarea
+            name="summary"
+            id="summary-input"
+            rows="10"
+            cols="30"
+            placeholder="Summary of Movie"></textarea>
+            <br/>
+            <button id="new-movie-submit">Submit</button>
+        </form>
+        <div class="movies">
+
+        </div>
+        <div class="movie">
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/movies.js"></script>
 </body>
 </html>
